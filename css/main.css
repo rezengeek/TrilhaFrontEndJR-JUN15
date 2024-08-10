@@ -1,0 +1,788 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300);
+
+@font-face {
+  font-family: Fastest;
+  src: url(../fonts/FastestPersonalUse-PKx57.ttf);
+}
+
+:root {
+  --red: #e53939;
+  --white: #FFFFFF;
+  --black: #000000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  overflow-x: hidden;
+  background-color: #000000;
+  color: #ffffff;
+  font-family: "Roboto Condensed", sans-serif;
+  margin: 0;
+}
+
+.nav {
+  width: 100%;
+  height: 65px;
+  display: block;
+  line-height: 65px;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: top 0.3s;
+}
+
+.nav.hidden {
+  top: -65px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.logo a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1.2rem;
+  margin-left: 10px;
+}
+
+strong {
+  color: #e53939;
+}
+
+.main_list {
+  display: flex;
+}
+
+.navlinks {
+  list-style: none;
+  display: flex;
+  margin-right: 10px;
+  padding: 0;
+}
+
+.navlinks li {
+  margin: 0 25px;
+  letter-spacing: 5px;
+  font: bold 14px/1.4 "Roboto Condensed", sans-serif;
+}
+
+.navlinks a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 1200px) {
+  .navlinks a {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 1086px) {
+  .navlinks a {
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 1005px) {
+  .logo a {
+    font-size: 1.0rem;
+  }
+}
+
+@media (max-width: 975px) {
+  .logo a {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 960px) {
+  .logo a {
+    font-size: 1.2rem;
+  }
+}
+
+.navlinks li a:hover {
+  color: #e53939;
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: #e53939;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 960px) {
+  .navlinks {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    background-color: #000000;
+    text-align: center;
+  }
+
+  .navlinks.active {
+    display: flex;
+  }
+
+  .nav .burger {
+    display: block;
+  }
+
+  .burger.active div:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .burger.active div:nth-child(2) {
+    opacity: 0;
+  }
+
+  .burger.active div:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+}
+
+/* Scrollbar Section */
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#000000, #e53939, #000000);
+}
+
+/* Parallax Background site Section */
+
+.gif-3d {
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-image: url("../img/parallax1.gif");
+  /*Background 2 main.js*/
+}
+
+
+
+/* About myself section */
+.about-myself {
+  padding: 100px 20px;
+}
+
+.about-myself .content {
+  text-align: left;
+}
+
+.about-myself h1 {
+  font-family: "Fastest", sans-serif;
+  color: #e53939;
+  font-size: 30px;
+  margin-bottom: 60px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.about-myself p {
+  font-size: 16px;
+}
+
+.about-myself span {
+  color: #e53939;
+  font-weight: bold;
+}
+
+.about-myself .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-content {
+  display: flex;
+  align-items: flex-start;
+}
+
+.about-content .text {
+  flex: 1;
+  margin-right: 80px;
+}
+
+.profile-photo {
+  margin-right: 30px;
+  top: 50px;
+  position: relative;
+  display: inline-block;
+  border: 4px solid transparent;
+  border-radius: 50%;
+  padding: 1px;
+  background: linear-gradient(var(--black), var(--black)),
+    linear-gradient(90deg, var(--red), var(--white), var(--red));
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  background-size: 250% 250%;
+  animation: animateBorder 2s infinite linear;
+}
+
+.profile-photo img {
+  display: block;
+  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+
+.profile-photo::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: linear-gradient(90deg, var(--red), var(--white), var(--black), var(--red), var(--white), var(--black));
+  background-size: 500% 500%;
+  animation: animateColor 12s infinite linear;
+  filter: blur(100px);
+  z-index: 0;
+  transition: background-size 0.3s ease;
+}
+
+.profile-photo:hover::before {
+  animation: animateHoverColor 3s infinite linear;
+}
+
+.profile-photo:hover img {
+  transform: scale(1.1);
+}
+
+@keyframes animateBorder {
+  0% {
+    background-position: 0%;
+  }
+
+  100% {
+    background-position: 200%;
+  }
+}
+
+@keyframes animateColor {
+  0% {
+    background-position: 0% 0%;
+  }
+
+  50% {
+    background-position: 100% 100%;
+  }
+
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+@keyframes animateHoverColor {
+  0% {
+    background-position: 0% 0%;
+  }
+
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+/* Icons */
+.icons {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: -50px;
+}
+
+.icons i {
+  color: #e53939;
+  background: #000000;
+  height: 45px;
+  width: 45px;
+  padding: 13px;
+  margin: 0 8px;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  transition: 0.5s ease;
+  cursor: pointer;
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.icons i:hover {
+  border-color: #e53939;
+  transform: scale(1.1);
+}
+
+
+
+/* CSS para a seção parallax Hobbies */
+
+.h-parallax {
+  height: 100vh;
+  /* Altura do parallax*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  background-color: #000000;
+}
+
+.parallax {
+  background-image: url('../img/parallax2.png');
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  margin-top: -300px;
+  /* Fixa o plano de fundo para criar o efeito parallax */
+  width: 100%;
+  height: 40vh;
+  /* Altura da imagem de fundo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.parallax .content {
+  max-width: 600px;
+  /* Largura máxima do conteúdo */
+  padding: 20px;
+}
+
+
+
+/* Hobby section */
+.h-hobbies {
+  margin-top: -300px;
+  margin-bottom: -20px;
+  padding: 100px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.h-hobbies .hobbies {
+  text-align: left;
+  /* Centraliza o texto dentro do contêiner .hobbies */
+}
+
+.h-hobbies h1 {
+  font-family: "Fastest", sans-serif;
+  color: #e53939;
+  font-size: 30px;
+  margin-bottom: 60px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.h-hobbies p {
+  font-size: 16px;
+}
+
+.h-hobbies span {
+  color: #e53939;
+  font-weight: bold;
+}
+
+.h-hobbies .h-hobbies {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hobbies-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  /* Alinha o conteúdo horizontalmente ao centro */
+}
+
+.hobbies-content .text {
+  flex: 1;
+  margin-left: 100px;
+}
+
+.photo2 img {
+  margin-top: -20px;
+  display: block;
+  border-radius: 50%;
+  width: 250px;
+  height: 310px;
+  position: relative;
+  z-index: 1;
+}
+
+.video-container {
+  width: 100%;
+  max-width: 500px;
+  /* Máxima largura do iframe */
+  margin: 0 auto;
+  /* Centraliza horizontalmente */
+  position: relative;
+  padding-top: 4.25%;
+  padding-bottom: 30.25%;
+  /* Proporção 16:9 */
+  height: 0;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video-thumbnail {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../img/player.png') no-repeat center center;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.video-thumbnail:hover {
+  opacity: 0.8;
+}
+
+.video-iframe {
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+@keyframes animateBorder {
+  0% {
+    background-position: 0%;
+  }
+
+  100% {
+    background-position: 200%;
+  }
+}
+
+@keyframes animateColor {
+  0% {
+    background-position: 0% 0%;
+  }
+
+  50% {
+    background-position: 100% 100%;
+  }
+
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+@keyframes animateHoverColor {
+  0% {
+    background-position: 0% 0%;
+  }
+
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+
+
+/* CSS para a seção parallax motivations */
+
+.h-parallax3 {
+  height: 100vh;
+  /* Altura do parallax*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  background-color: #000000;
+}
+
+.parallax3 {
+  background-image: url('../img/parallax4.png');
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  margin-top: -300px;
+  /* Fixa o plano de fundo para criar o efeito parallax */
+  width: 100%;
+  height: 40vh;
+  /* Altura da imagem de fundo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.parallax3 .content-parallax3 {
+  max-width: 600px;
+  /* Largura máxima do conteúdo */
+  padding: 20px;
+}
+
+
+
+/* Motivations section */
+.motivations-section {
+  margin-top: -300px;
+  margin-bottom: 100px;
+  padding: 100px 20px;
+}
+
+.motivations-section h1 {
+  font-family: "Fastest", sans-serif;
+  color: #e53939;
+  font-size: 30px;
+  margin-bottom: 60px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.motivations-section p {
+  font-size: 16px;
+}
+
+.motivations-section span {
+  color: #e53939;
+  font-weight: bold;
+}
+
+.motivations-section .codigocerto {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-codigocerto {
+  display: flex;
+  align-items: flex-start;
+}
+
+.about-codigocerto .text {
+  flex: 1;
+}
+
+
+
+/* Footer */
+
+footer {
+  background: linear-gradient(#0b0b0b, #000000, #000000);
+  text-align: center;
+  padding: 10px;
+  position: relative;
+}
+
+footer hr {
+  border: 0;
+  height: 0;
+  background: #000000;
+  margin: 0;
+}
+
+footer p {
+  color: #737377;
+  margin: 0;
+}
+
+footer a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer img {
+  width: 30px;
+  height: 30px;
+  margin-bottom: -10px;
+}
+
+.no-underline {
+  text-decoration: none;
+}
+
+
+
+/* Responsividade para seções about-myself, h-hobbies e motivations */
+@media (max-width: 768px) {
+
+  .about-myself,
+  .h-hobbies,
+  .motivations-section {
+    padding: 60px 10px;
+  }
+
+  .about-myself p,
+  .h-hobbies p,
+  .motivations-section p {
+    font-size: 14px;
+  }
+
+  .about-myself .content,
+  .h-hobbies .hobbies,
+  .motivations-section .codigocerto {
+    text-align: center;
+  }
+
+  .about-content,
+  .hobbies-content,
+  .about-codigocerto {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-content .text,
+  .hobbies-content .text,
+  .about-codigocerto .text {
+    margin-left: 0;
+    margin-bottom: 20px;
+    margin-right: 0;
+  }
+
+  .profile-photo img,
+  .photo2 img {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  .h-hobbies {
+    padding: 60px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hobbies-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hobbies-content .text {
+    margin-bottom: 20px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .photo2 {
+    margin-bottom: 10px;
+  }
+
+  .photo2 img {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+/* Responsividade para a seção about-myself */
+@media (max-width: 768px) {
+
+  .about-myself {
+    padding: 60px 10px;
+    text-align: center;
+  }
+
+  .about-myself h1 {
+    margin-bottom: 20px;
+  }
+
+  .about-myself .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+
+  .profile-photo {
+    order: 1;
+    margin-bottom: 80px;
+    margin-left: 35px;
+    z-index: 1;
+  }
+
+  .profile-photo img {
+    width: 150px;
+    height: 150px;
+    display: block;
+  }
+
+  .text {
+    order: 2;
+    margin: 0;
+    z-index: 0;
+  }
+}
+
+
+
+/* Responsividade para a seção motivations */
+@media (max-width: 768px) {
+
+  .motivations-section {
+    padding: 60px 10px;
+    text-align: center;
+  }
+
+  .motivations-section h1 {
+    margin-bottom: 20px;
+  }
+
+  .motivations-section .codigocerto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+
+  .text {
+    order: 2;
+    margin: 0;
+    z-index: 0;
+  }
+}

@@ -1,0 +1,70 @@
+// JS navbar
+document.addEventListener('DOMContentLoaded', function() {
+  const burger = document.querySelector('.burger');
+  const navLinks = document.querySelector('.navlinks');
+
+  burger.addEventListener('click', function() {
+    burger.classList.toggle('active');
+    navLinks.classList.toggle('active');
+  });
+});
+
+
+// JS eagle audio
+function playAudio() {
+  var audio = document.getElementById('myAudio');
+  if (audio.paused) { // Verifica se o áudio está pausado
+    audio.volume = 0.02; // Define o volume (0.0 a 1.0)
+    audio.play().catch(function(error) {
+      console.log('Erro ao tentar reproduzir o áudio: ', error);
+    });
+  }
+  // Remove o event listener após a primeira execução
+  document.removeEventListener('scroll', playAudio);
+  document.removeEventListener('wheel', playAudio);
+  document.removeEventListener('touchmove', playAudio);
+}
+
+// Adiciona o event listener para o evento de scroll, wheel e touchmove
+document.addEventListener('scroll', playAudio);
+document.addEventListener('wheel', playAudio);
+document.addEventListener('touchmove', playAudio);
+
+
+// Muda gif do background
+
+document.addEventListener("DOMContentLoaded", function() {
+  const gif3d = document.querySelector('.gif-3d');
+  const images = ["../img/parallax1.gif", "../img/parallax2.gif"];
+  let currentImageIndex = 0;
+
+  setInterval(() => {
+    currentImageIndex = (currentImageIndex + 1) % images.length;
+    gif3d.style.backgroundImage = `url(${images[currentImageIndex]})`;
+  }, 37400); // Mudar a imagem a cada 37 segundos (38000ms)
+});
+
+
+// Esconde o navbar
+let lastScrollTop = 0;
+  const navbar = document.querySelector('.nav');
+
+  window.addEventListener('scroll', function() {
+    let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+    
+    if (currentScroll > lastScrollTop) {
+      // Rolando para baixo
+      navbar.classList.add('hidden');
+    } else {
+      // Rolando para cima
+      navbar.classList.remove('hidden');
+    }
+    
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Para Mobile ou Navegadores em Scroll para cima
+  });
+
+// função clicar na thumb - video
+  function showVideo() {
+    document.querySelector('.video-thumbnail').style.display = 'none';
+    document.querySelector('.video-iframe').style.display = 'block';
+}
