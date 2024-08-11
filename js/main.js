@@ -35,7 +35,7 @@ document.addEventListener('touchmove', playAudio);
 
 document.addEventListener("DOMContentLoaded", function() {
   const gif3d = document.querySelector('.gif-3d');
-  const images = ["../img/parallax1.gif", "../img/parallax2.gif"];
+  const images = ["../trilha-front-endJR-codigocerto/img/parallax1.gif", "../trilha-front-endJR-codigocerto/img/parallax2.gif"];
   let currentImageIndex = 0;
 
   setInterval(() => {

@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: Fastest;
-  src: url(../fonts/FastestPersonalUse-PKx57.ttf);
+  src: url(../trilha-front-endJR-codigocerto/fonts/FastestPersonalUse-PKx57.ttf);
 }
 
 :root {
@@ -189,7 +189,7 @@ strong {
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
-  background-image: url("../img/parallax1.gif");
+  background-image: url("../trilha-front-endJR-codigocerto/img/parallax1.gif");
   /*Background 2 main.js*/
 }
 
@@ -365,7 +365,7 @@ strong {
 }
 
 .parallax {
-  background-image: url('../img/parallax2.png');
+  background-image: url('../trilha-front-endJR-codigocerto/img/parallax2.png');
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -476,7 +476,7 @@ strong {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('../img/player.png') no-repeat center center;
+  background: url('../trilha-front-endJR-codigocerto/img/player.png') no-repeat center center;
   background-size: cover;
   cursor: pointer;
 }
@@ -542,7 +542,7 @@ strong {
 }
 
 .parallax3 {
-  background-image: url('../img/parallax4.png');
+  background-image: url('../trilha-front-endJR-codigocerto/img/parallax4.png');
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
