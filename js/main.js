@@ -31,20 +31,6 @@ document.addEventListener('wheel', playAudio);
 document.addEventListener('touchmove', playAudio);
 
 
-// Muda gif do background
-
-document.addEventListener("DOMContentLoaded", function() {
-  const gif3d = document.querySelector('.gif-3d');
-  const images = ["../trilha-front-endJR-codigocerto/img/parallax1.gif", "../trilha-front-endJR-codigocerto/img/parallax2.gif"];
-  let currentImageIndex = 0;
-
-  setInterval(() => {
-    currentImageIndex = (currentImageIndex + 1) % images.length;
-    gif3d.style.backgroundImage = `url(${images[currentImageIndex]})`;
-  }, 37400); // Mudar a imagem a cada 37 segundos (38000ms)
-});
-
-
 // Esconde o navbar
 let lastScrollTop = 0;
   const navbar = document.querySelector('.nav');
@@ -68,3 +54,4 @@ let lastScrollTop = 0;
     document.querySelector('.video-thumbnail').style.display = 'none';
     document.querySelector('.video-iframe').style.display = 'block';
 }
+
