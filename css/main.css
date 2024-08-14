@@ -214,7 +214,7 @@ strong {
 }
 
 .about-myself p {
-  font-size: 16px;
+  font-size: 17px;
 }
 
 .about-myself span {
@@ -424,7 +424,7 @@ strong {
 }
 
 .h-hobbies p {
-  font-size: 16px;
+  font-size: 17px;
 }
 
 .h-hobbies span {
@@ -593,7 +593,7 @@ strong {
 }
 
 .motivations-section p {
-  font-size: 16px;
+  font-size: 17px;
 }
 
 .motivations-section span {
@@ -657,9 +657,8 @@ footer img {
 }
 
 
-
 /* Responsividade para seções about-myself, h-hobbies e motivations */
-@media (max-width: 768px) {
+@media (max-width: 1183px) {
 
   .about-myself,
   .h-hobbies,
@@ -670,7 +669,7 @@ footer img {
   .about-myself p,
   .h-hobbies p,
   .motivations-section p {
-    font-size: 14px;
+    font-size: 17px;
   }
 
   .about-myself .content,
@@ -694,12 +693,13 @@ footer img {
     margin-right: 0;
   }
 
-  .profile-photo img,
-  .photo2 img {
+  .profile-photo img {
     width: 150px;
     height: 150px;
   }
 }
+
+
 
 @media (max-width: 768px) {
   .h-hobbies {
@@ -726,13 +726,13 @@ footer img {
   }
 
   .photo2 img {
-    width: 150px;
-    height: 150px;
+    width: 250px;
+    height: 310px;
   }
 }
 
 /* Responsividade para a seção about-myself */
-@media (max-width: 768px) {
+@media (max-width: 1183px) {
 
   .about-myself {
     padding: 60px 10px;
@@ -758,8 +758,8 @@ footer img {
   }
 
   .profile-photo img {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 250px;
     display: block;
   }
 
@@ -781,7 +781,7 @@ footer img {
   }
 
   .motivations-section h1 {
-    margin-bottom: 20px;
+    margin-bottom: 50px;
   }
 
   .motivations-section .codigocerto {
@@ -795,5 +795,14 @@ footer img {
     order: 2;
     margin: 0;
     z-index: 0;
+  }
+}
+
+@media (max-width: 850px) {
+  p {
+    max-width: 90%;
+    margin: 0 auto;
+    text-align: justify;
+
   }
 }
