@@ -1,8 +1,8 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300);
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300");
 
 @font-face {
   font-family: Fastest;
-  src: url(../fonts/FastestPersonalUse-PKx57.ttf);
+  src: url("../fonts/FastestPersonalUse-PKx57.ttf");
 }
 
 :root {
@@ -138,11 +138,11 @@ strong {
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 65px;
-    left: 0;
+    top: 0px;
+    left: 0px;
     width: 100%;
     background-color: #000000;
-    text-align: center;
+    text-align: right;
   }
 
   .navlinks.active {
@@ -244,7 +244,7 @@ strong {
   position: relative;
   display: inline-block;
   border: 4px solid transparent;
-  border-radius: 50%;
+  border-radius: 10%;
   padding: 1px;
   background: linear-gradient(var(--black), var(--black)),
     linear-gradient(90deg, var(--red), var(--white), var(--red));
@@ -256,12 +256,12 @@ strong {
 
 .profile-photo img {
   display: block;
-  border-radius: 50%;
-  width: 250px;
-  height: 250px;
+  border-radius: 8%;
+  width: 290px;
+  height: 350px;
   position: relative;
   z-index: 1;
-  transition: transform 0.3s ease;
+  /* transition: transform 1.5s ease;*/
 }
 
 .profile-photo::before {
@@ -270,13 +270,13 @@ strong {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
+  width: 90%;
+  height: 90%;
+  border-radius: 0%;
   background: linear-gradient(90deg, var(--red), var(--white), var(--black), var(--red), var(--white), var(--black));
   background-size: 500% 500%;
   animation: animateColor 12s infinite linear;
-  filter: blur(100px);
+  filter: blur(30px);
   z-index: 0;
   transition: background-size 0.3s ease;
 }
@@ -285,9 +285,6 @@ strong {
   animation: animateHoverColor 3s infinite linear;
 }
 
-.profile-photo:hover img {
-  transform: scale(1.1);
-}
 
 @keyframes animateBorder {
   0% {
@@ -322,6 +319,22 @@ strong {
     background-position: 100% 100%;
   }
 }
+
+
+
+/* Scroll Reveal About my self */
+.about-myself h1,
+.effect-text-about,
+.effect-photo-about,
+.effect-icons-about {
+  visibility: hidden;
+}
+
+
+
+
+
+
 
 /* Icons */
 .icons {
@@ -365,7 +378,7 @@ strong {
 }
 
 .parallax {
-  background-image: url('../img/parallax2.png');
+  background-image: url("../img/parallax2.png");
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -476,7 +489,7 @@ strong {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('../img/player.png') no-repeat center center;
+  background: url("../img/player.png") no-repeat center center;
   background-size: cover;
   cursor: pointer;
 }
@@ -542,7 +555,7 @@ strong {
 }
 
 .parallax3 {
-  background-image: url('../img/parallax4.png');
+  background-image: url("../img/parallax4.png");
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
