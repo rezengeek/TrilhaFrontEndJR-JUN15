@@ -324,7 +324,12 @@ strong {
 .about-myself h1,
 .effect-text-about,
 .effect-photo-about,
-.effect-icons-about {
+.effect-icons-about,
+.h-hobbies h1,
+.effect-photo-hobbies,
+.effect-text-hobbies,
+.motivations-section h1,
+.effect-text-motivations {
   visibility: hidden;
 }
 

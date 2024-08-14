@@ -31,6 +31,53 @@ effectreveal.reveal('.effect-icons-about',
 {
   duration: 2000,
   distance: '90px',
-  delay: 700,
+  delay: 500,
   reset: false
+})
+
+
+// Hobbies
+
+effectreveal.reveal('.h-hobbies h1',
+{
+  duration: 2000,
+  distance: '90px',
+  reset: false
+})
+
+effectreveal.reveal('.effect-photo-hobbies',
+{
+  duration: 2000,
+  distance: '90px',
+  reset: false,
+  delay: 500,
+  origin: 'left'
+})
+
+effectreveal.reveal('.effect-text-hobbies',
+{
+  duration: 2000,
+  distance: '90px',
+  reset: false,
+  delay: 500,
+  origin: 'right'
+})
+
+
+// Motivations
+
+effectreveal.reveal('.motivations-section h1',
+{
+  duration: 2000,
+  distance: '90px',
+  reset: false
+})
+    
+effectreveal.reveal('.effect-text-motivations',
+{
+  duration: 2000,
+  distance: '90px',
+  reset: false,
+  delay: 500,
+  origin: 'left'
 })
