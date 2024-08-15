@@ -31,7 +31,6 @@ effectreveal.reveal('.effect-icons-about',
 {
   duration: 2000,
   distance: '90px',
-  delay: 500,
   reset: false
 })
 
