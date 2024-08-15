@@ -23,7 +23,7 @@ effectreveal.reveal('.effect-photo-about',
   duration: 2000,
   distance: '90px',
   delay: 500,
-  origin: 'right',
+  origin: 'bottom',
   reset: false
 })
 
@@ -50,7 +50,7 @@ effectreveal.reveal('.effect-photo-hobbies',
   distance: '90px',
   reset: false,
   delay: 500,
-  origin: 'left'
+  origin: 'bottom'
 })
 
 effectreveal.reveal('.effect-text-hobbies',
@@ -59,7 +59,7 @@ effectreveal.reveal('.effect-text-hobbies',
   distance: '90px',
   reset: false,
   delay: 500,
-  origin: 'right'
+  origin: 'left'
 })
 
 effectreveal.reveal('.video-container',
@@ -68,7 +68,7 @@ effectreveal.reveal('.video-container',
     distance: '90px',
     reset: false,
     delay: 600,
-    origin: 'right'
+    origin: 'bottom'
   })
 
 // Motivations
