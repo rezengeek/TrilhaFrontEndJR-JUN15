@@ -63,6 +63,14 @@ effectreveal.reveal('.effect-text-hobbies',
   origin: 'right'
 })
 
+effectreveal.reveal('.video-container',
+  {
+    duration: 2000,
+    distance: '90px',
+    reset: false,
+    delay: 600,
+    origin: 'right'
+  })
 
 // Motivations
 

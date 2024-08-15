@@ -52,6 +52,6 @@ let lastScrollTop = 0;
 // função clicar na thumb - video
   function showVideo() {
     document.querySelector('.video-thumbnail').style.display = 'none';
-    document.querySelector('.video-iframe').style.display = 'block';
+    document.querySelector('.video-video').style.display = 'block';
 }
 
