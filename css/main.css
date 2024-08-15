@@ -32,7 +32,8 @@ body {
   display: block;
   line-height: 65px;
   text-align: center;
-  background-color: transparent;
+  background: rgba(0, 0, 0, 0);
+  /* Fundo transparente */
   border: none;
   position: fixed;
   top: 0;
@@ -84,7 +85,31 @@ strong {
   text-decoration: none;
   color: #ffffff;
   font-size: 0.8rem;
+  position: relative;
+  /* Necessário para o efeito de borda dinâmica */
 }
+
+.navlinks a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  /* Altura da borda */
+  background: linear-gradient(270deg, #e53939 0%, #17161d 100%);
+  bottom: -5px;
+  /* Espaço entre o texto e a borda */
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.navlinks a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+
 
 @media (max-width: 1200px) {
   .navlinks a {
